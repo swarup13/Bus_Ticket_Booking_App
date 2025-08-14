@@ -1,0 +1,345 @@
+/* booking-form.component.css */
+.booking-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 20px 20px; /* Top padding for fixed header */
+}
+
+.booking-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.ticket-icon {
+  font-size: 2rem;
+  filter: hue-rotate(220deg);
+}
+
+.card-title {
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: end; /* Align items at the bottom to ensure same height */
+}
+
+.col-md-6 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.location-icon,
+.calendar-icon {
+  font-size: 1.1rem;
+}
+
+/* Consistent height for all form controls */
+.form-select,
+.form-input,
+.date-input {
+  height: 50px; /* Fixed height for all form controls */
+  padding: 15px 18px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+   /* Changed from #fafafa to white for better contrast */
+  font-family: inherit;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #333; /* Explicit text color */
+  line-height: 1.1; /* Better line height for text visibility */
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-color: white; /* Ensure white background */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  color: #333 !important; /* Force text color */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+.form-input {
+  width: 100%;
+}
+
+.date-input {
+  color: #555;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Focus states */
+.form-select:focus,
+.form-input:focus,
+.date-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white !important; /* Force white background on focus */
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+  color: #333 !important; /* Force text color on focus */
+}
+
+.form-select:hover,
+.form-input:hover,
+.date-input:hover {
+  border-color: #c7d2fe;
+  background: white; /* Ensure white background on hover */
+}
+
+/* Additional select-specific styling for better visibility */
+.form-select:active,
+.form-select:focus,
+.form-select:hover {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+/* Ensure selected option is visible */
+.form-select option:checked,
+.form-select option:selected {
+  background-color: #667eea !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+/* Date row styling */
+.row:last-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row:last-of-type .form-label {
+  margin-bottom: 8px;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: inherit;
+  height: 56px; /* Slightly taller for button */
+}
+
+.search-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #5a6fd8, #6a42a0);
+}
+
+.search-btn:active {
+  transform: translateY(-1px);
+}
+
+.search-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 120px 15px 15px 15px;
+  }
+  
+  .booking-card {
+    padding: 30px 25px;
+    border-radius: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .col-md-6 {
+    width: 100%;
+  }
+  
+  .booking-form {
+    gap: 20px;
+  }
+  
+  /* Maintain consistent height on mobile */
+  .form-select,
+  .form-input,
+  .date-input {
+    height: 45px;
+    padding: 12px 15px;
+  }
+  
+  .form-select {
+    padding-right: 40px;
+    background-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 100px 10px 10px 10px;
+  }
+  
+  .booking-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .ticket-icon {
+    font-size: 1.5rem;
+  }
+  
+  .form-select,
+  .form-input,
+  .date-input {
+    height: 42px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .form-select {
+    padding-right: 35px;
+    background-size: 12px;
+  }
+  
+  .search-btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    height: 50px;
+  }
+}
+
+/* Animation for form appearance */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-card {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Custom select option styling */
+.form-select option {
+  padding: 12px;
+  background: white !important;
+  color: #333 !important;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.form-select option:hover {
+  background: #f0f4ff !important;
+  color: #333 !important;
+}
+
+/* Remove default select arrow on webkit browsers */
+.form-select::-webkit-select-arrow {
+  display: none;
+}
+
+/* Firefox select styling */
+.form-select::-moz-focus-inner {
+  border: 0;
+}
+
+/* WebKit specific styling for better text visibility */
+.form-select::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.form-select:-moz-placeholder {
+  color: #aaa;
+}
+
+.form-select::-moz-placeholder {
+  color: #aaa;
+}
+
+.form-select:-ms-input-placeholder {
+  color: #aaa;
+}
+
+/* Focus ring removal for better custom styling */
+.form-select:focus::-ms-value {
+  color: #333 !important;
+  background: white !important;
+}

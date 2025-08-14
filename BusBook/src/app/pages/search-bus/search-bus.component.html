@@ -1,0 +1,48 @@
+<p>search-bus works!</p>
+
+<!-- booking-form.component.html -->
+<div class="booking-container">
+    <div class="booking-card">
+        <div class="card-header">
+            <i class="ticket-icon">🎫</i>
+            <h2 class="card-title">Book Your Bus Ticket</h2>
+        </div>
+
+        <form class="booking-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label">
+                        <i class="location-icon">📍</i>
+                        From
+                    </label>
+                    <select class="form-select" name="fromCity" required>
+                        <option value="Pune">Pune</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">
+                        <i class="location-icon">📍</i>
+                        To
+                    </label>
+                    <select class="form-select" name="toCity" required>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="form-label">
+                    <i class="calendar-icon">📅</i>
+                    Date of Journey
+                </label>
+                <input type="date" class="form-input date-input" name="journeyDate" required>
+            </div>
+
+            <button type="submit" class="search-btn">
+                <i class="search-icon">🔍</i>
+                Search Buses
+            </button>
+        </form>
+    </div>
+</div>
